@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DZ-LAP STORE | Order_Now</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	
+	<!--	header-->
+	<header class="header">
+		<img src="image/logo.png" alt="logo" class="logo">
+
+		<nav>
+			<a class="menu" href="main.html">HOME</a>
+			<a class="menu" href="store.html">STORE</a>
+			<a class="menu" href="about.html">ABOUT</a>
+			<a class="menu" href="#contact.us">CONTACT</a>
+		</nav>
+	</header>
+	
+<!--	content-->
+	<div class="orderpg">
+	
+	<form class="form" method="POST" name="myForm" action="create.php" onSubmit="return validate();">
+		<table>
+			
+			<tr>
+				<th colspan="2"><h1>--Place Your Order--</h1></th>
+				<th></th>
+			</tr>
+			
+			<tr>
+				<td><label>Current Date &amp; Time :</label></td>
+				<td><input type="datetime-local" id="datetime" name="date"></td>
+			</tr>
+			
+			<tr>
+				<td><label>First Name :</label></td>
+				<td><input type="text" name="fname" placeholder="Enter Your First Name(required)" id="fname"></td>
+			</tr>
+			
+			<tr>
+				<td><label>Last Name :</label></td>
+				<td><input type="text" name="lname" placeholder="Enter Your Last Name (required)" id="lname"></td>
+			</tr>
+			
+			<tr>
+				<td><label>Contact No :</label></td>
+				<td>
+					<input type="number" name="contact" placeholder="Enter Your Contact Number (required)" id="contact" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10" required>
+
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>E-mail :</label></td>
+				<td><input type="email" name="email" placeholder="Enter Your E-mail" id="email"></td>
+			</tr>
+			
+			<tr>
+				<td><label>NIC :</label></td>
+				<td><input type="text" name="nic" placeholder="Enter Your NIC (required)" id="nic"></td>
+			</tr>
+			
+			<tr>
+				<td><label>Address :</label></td>
+				<td>
+					<textarea name="address" placeholder="Enter Your Address (required)" rows="4" cols="80" id="address"></textarea>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Order 1 :</label></td>
+				<td>
+					<select name="order1">
+						<option selected value="None">Choose A Product</option>
+						<option>ASUS TUF F15 (2023)</option>
+						<option>DELL Alienware M18</option>
+						<option>HP OMEN 16</option>
+						<option>MSI Bravo 15 B7E</option>
+						<option>LENOVO LEGION 5 GEN 6 (15, AMD)</option>
+						<option>Razer Blade 15</option>
+					</select>
+					
+					<label class="order_color">(Black Colour)Qty:</label>
+					
+					<select name="black1">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+					
+					<label class="order_color">(White Colour)Qty:</label>
+					
+					<select name="white1">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+	
+					
+					<br/><br/><br/>
+					<label>Warrenty :</label>
+					
+					<input type="radio" name="warranty1" checked="true" value="None"><lable>None</lable>
+					<input type="radio" name="warranty1" value="1 Year"><lable>1 Year</lable>
+					
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Order 2 :</label></td>
+				<td>
+					<select name="order2">
+						<option selected value="None">Choose A Product</option>
+						<option>ASUS TUF F15 (2023)</option>
+						<option>DELL Alienware M18</option>
+						<option>HP OMEN 16</option>
+						<option>MSI Bravo 15 B7E</option>
+						<option>LENOVO LEGION 5 GEN 6 (15, AMD)</option>
+						<option>Razer Blade 15</option>
+					</select>
+					
+					<label class="order_color">(Black Colour)Qty:</label>
+					
+					<select name="black2">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+					
+					<label class="order_color">(White Colour)Qty:</label>
+					
+					<select name="white2">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+	
+					
+					<br/><br/><br/>
+					<label>Warrenty :</label>
+					
+					<input type="radio" name="warranty2" checked="true" value="None"><lable>None</lable>
+					<input type="radio" name="warranty2" value="1 Year"><lable>1 Year</lable>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Order 3 :</label></td>
+				<td>
+					<select name="order3">
+						<option selected value="None">Choose A Product</option>
+						<option>ASUS TUF F15 (2023)</option>
+						<option>DELL Alienware M18</option>
+						<option>HP OMEN 16</option>
+						<option>MSI Bravo 15 B7E</option>
+						<option>LENOVO LEGION 5 GEN 6 (15, AMD)</option>
+						<option>Razer Blade 15</option>
+					</select>
+						
+					<label class="order_color">(Black Colour)Qty:</label>
+					
+					<select name="black3">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+					
+					<label class="order_color">(White Colour)Qty:</label>
+					
+					<select name="white3">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+	
+					
+					<br/><br/><br/>
+					<label>Warrenty :</label>
+					
+					<input type="radio" name="warranty3" checked="true" value="None"><lable>None</lable>
+					<input type="radio" name="warranty3" value="1 Year"><lable>1 Year</lable>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Order 4 :</label></td>
+				<td>
+					<select name="order4">
+						<option selected value="None">Choose A Product</option>
+						<option>ASUS TUF F15 (2023)</option>
+						<option>DELL Alienware M18</option>
+						<option>HP OMEN 16</option>
+						<option>MSI Bravo 15 B7E</option>
+						<option>LENOVO LEGION 5 GEN 6 (15, AMD)</option>
+						<option>Razer Blade 15</option>
+					</select>
+					
+					<label class="order_color">(Black Colour)Qty:</label>
+					
+					<select name="black4">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+					
+					<label class="order_color">(White Colour)Qty:</label>
+					
+					<select name="white4">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+	
+					
+					<br/><br/><br/>
+					<label>Warrenty :</label>
+					
+					<input type="radio" name="warranty4" checked="true" value="None"><lable>None</lable>
+					<input type="radio" name="warranty4" value="1 Year"><lable>1 Year</lable>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Order 5 :</label></td>
+				<td>
+					<select name="order5">
+						<option selected value="None">Choose A Product</option>
+						<option>ASUS TUF F15 (2023)</option>
+						<option>DELL Alienware M18</option>
+						<option>HP OMEN 16</option>
+						<option>MSI Bravo 15 B7E</option>
+						<option>LENOVO LEGION 5 GEN 6 (15, AMD)</option>
+						<option>Razer Blade 15</option>
+					</select>
+					
+					<label class="order_color">(Black Colour)Qty:</label>
+					
+					<select name="black5">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+					
+					<label class="order_color">(White Colour)Qty:</label>
+					
+					<select name="white5">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+	
+					
+					<br/><br/><br/>
+					<label>Warrenty :</label>
+					
+					<input type="radio" name="warranty5" checked="true" value="None"><lable>None</lable>
+					<input type="radio" name="warranty5" value="1 Year"><lable>1 Year</lable>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Order 6 :</label></td>
+				<td>
+					<select name="order6">
+						<option selected value="None">Choose A Product</option>
+						<option>ASUS TUF F15 (2023)</option>
+						<option>DELL Alienware M18</option>
+						<option>HP OMEN 16</option>
+						<option>MSI Bravo 15 B7E</option>
+						<option>LENOVO LEGION 5 GEN 6 (15, AMD)</option>
+						<option>Razer Blade 15</option>
+					</select>
+					
+					<label class="order_color">(Black Colour)Qty:</label>
+					
+					<select name="black6">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+					
+					<label class="order_color">(White Colour)Qty:</label>
+					
+					<select name="white6">
+						<option selected>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5-MAX</option>
+					</select>
+	
+					
+					<br/><br/><br/>
+					<label>Warrenty :</label>
+					
+					<input type="radio" name="warranty6" checked="true" value="None"><lable>None</lable>
+					<input type="radio" name="warranty6" value="1 Year"><lable>1 Year</lable>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Custermization Request :</label></td>
+				<td>
+					<textarea name="custermize" id="custermize" rows="8" cols="80"></textarea>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<center>
+					<input type="reset" name="reset" value="Reset" id="reset">
+					<input type="submit" name="submit" value="Submit" id="submit">
+					</center>	
+				</td>
+				
+				<td></td>
+			</tr>
+			
+		</table>
+	</form>
+			
+			</div>
+			
+			<!--    footer-->
+	<footer class="footer" id="contact.us">
+		<table class="contacts">
+			
+		 <tr>
+			 <th><h3>CONTACT US</h3></th>
+			 <th><h3>BRANCHES</h3></th>
+		</tr>
+			
+	     <tr>
+			 <td>0766 03 53 04</td>
+			 <td>No 119,Richmond road</td>
+	     </tr>
+			
+		 <tr>
+			 <td>0112 95 79 74</td>
+			 <td>, Ragama</td>
+	     </tr>
+			
+		  <tr>
+			 <td></td>
+			 <td></td>
+	     </tr>
+			
+		 <tr>
+			 <td>dzlapstore@gmail.com</td>
+			 <td>No 222,Seeduwa road</td>
+	     </tr>
+			
+		 <tr>
+			 <td></td>
+			 <td>, Ja-ela</td><br/><br>
+	     </tr>
+			
+		</table>
+		
+		<hr class="hr1">
+		<p class="cright">DZ-Lap_Store@2023</p>
+		
+	</footer>
+
+	<script type="text/javascript" src="order.js"></script>
+	
+</body>
+</html>
